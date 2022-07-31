@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Rechner</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="./nes.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header nes-container with-title is-centered">
+        <div >
+            <i id="image1" class="nes-icon is-large star"></i>
+            <i id="image2"class="nes-icon is-large star "></i>
+            <i id="image3"class="nes-icon is-large star"></i>
+            <i id="image4" class="nes-icon is-large star "></i>
+            <h1 id=ph style="margin-top: 1%;">Ergebnis</h1>
+
+        </div>
+
+    </div>
+      
+
+    <div class="mid">
+        <div class=" nes-field is-inline">
+            <input class="nes-textarea is-success" placeholder="Zahl 1" id="1" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        </div>
+
+        <p></p>
+
+
+        <div class="nes-select">
+            <select required id="default_select">
+                <option value="" disabled selected hidden>Select...</option>
+                <option value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">/</option>
+                <option value="3">*</option>
+                <option value="4">^</option>
+                <option value="5">Sven 👀</option>
+            </select>
+        </div>
+
+
+        <p></p>
+
+        <div class=" nes-field is-inline">
+            <input class="nes-textarea is-error" placeholder="Zahl 2" id="2" type="text" >
+        </div>
+
+        <p></p>
+
+        <div class="mid2 nes-field is-inline">
+            <button class="nes-btn is-warning" type="button" onclick='funktion()'  >fettig</button>
+        </div>
+    </div>
+    
+    <!--Dialog-->
+    <section>
+        <dialog class="nes-dialog is-rounded " id="dialog-rounded">
+          <form method="dialog">
+            <p class="title">Hallo</p>
+            <i class="nes-octocat animate"></i>            
+            <p> Sven: Hallo ich bin Sven.</p>
+            <p> Ich trinke gerne Tee und verstecke mich hier vor Mathe.  👀</p>
+            <menu class="dialog-menu">
+              <button class="nes-btn is-primary" style="margin-left:40%">Tschüss</button>
+            </menu>
+          </form>
+        </dialog>
+      </section>
+
+    <script src="/code.js"></script>
+</body>
+</html>
